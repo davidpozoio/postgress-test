@@ -7,11 +7,11 @@ $password = "pasantebb";
 
 $connection_string = "host=$host port=$port dbname=$dbname user=$user password=$password";
 
-$dbconn = pg_connect($connection_string);
+$conn = pg_connect($connection_string);
 
-if (!$dbconn) {
+if (!$conn) {
     die("Error al conectar a la base de datos: " . pg_last_error());
 } else {
-    echo "Conexión exitosa";
+    return "Conexión exitosa";
 }
 ?>
